@@ -11,4 +11,8 @@ form.addEventListener("submit", (e) =>{
     e.preventDefault();
     listTasks.push(task);
     console.log(listTasks);
+
+    document.querySelector("form > .tasks").innerHTML = `
+    <h4>${listTasks}</h4>
+    `;
 })
