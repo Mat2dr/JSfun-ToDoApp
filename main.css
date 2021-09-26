@@ -1,5 +1,8 @@
 *{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,6 +11,24 @@ body {
     align-items: center;
     justify-content: center;
     padding: 50px;
+}
+
+form button {
+    color: teal;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+form button:hover {
+    color: white;
+    background-color: teal;
+}
+
+form input, form button {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    background-color: white;
 }
 
 .card {
