@@ -8,3 +8,9 @@ const input = document.getElementById("input");
 const CHECK = "fa-check-circle";
 const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
+
+//Date du jour
+const options = {weekday: 'long', year: 'numeric', month: 'short', day: 'numeric'};
+const today = new Date();
+
+dateElement.innerHTML = today.toLocaleDateString("fr-FR", options);
