@@ -17,7 +17,7 @@ const today = new Date();
 
 dateElement.innerHTML = today.toLocaleDateString("fr-FR", options);
 
-//Ajout tache function
+//Ajout tâche function
 function addToDo(toDo, id, done, trash){
 
     if(trash) {return;}
@@ -37,12 +37,12 @@ function addToDo(toDo, id, done, trash){
     list.insertAdjacentHTML(position, item);
 }
 
-// Ajout d'une tache quand l'utilisateur utilise Entrer
+// Ajout d'une tâche quand l'utilisateur utilise Entrer
 document.addEventListener("keyup", function(even){
     if(event.keyCode == 13){
         const toDo = input.value;
 
-        // Si tache n'est pas vide
+        // Si tâche n'est pas vide
         if(toDo){
             addToDo(toDo, id, false, false);
 
@@ -58,3 +58,12 @@ document.addEventListener("keyup", function(even){
         input.value = "";
     }
 });
+
+//Terminer une tâche
+function completedToDo(element){
+    element.classList.toggle(CHECK);
+    element.classList.toggle(UNCHECK);
+    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
+
+    LIST[element.id].done = LIST[element.id].done ? false : true;
+}
