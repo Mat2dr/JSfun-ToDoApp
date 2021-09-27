@@ -30,3 +30,16 @@ function addToDo(toDo){
 }
 
 addToDo("coder");
+
+// Ajout d'une tache quand l'utilisateur utilise Entrer
+document.addEventListener("keyup", function(even){
+    if(event.keyCode == 13){
+        const toDo = input.value;
+
+        // Si tache n'est pas vide
+        if(toDo){
+            addToDo(toDo);
+        }
+        input.value = "";
+    }
+})
