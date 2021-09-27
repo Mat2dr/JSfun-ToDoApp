@@ -67,3 +67,21 @@ function completedToDo(element){
 
     LIST[element.id].done = LIST[element.id].done ? false : true;
 }
+
+function removeToDo(element){
+    element.parentNode.parentNode.removeChild(element.parentNode);
+
+    LIST[element.id].trash = true;
+}
+
+//Changer l'item select
+list.addEventListener("click", function(event){
+    const element = event.target; // return l'element select
+    const elementJob = element.attributes.job.value; // Terminer ou supp
+
+    if(elementJob == "completed"){
+        completedToDo(element);
+    }else if (elementJob == "delete"){
+        removeToDo(element);
+    }
+})
