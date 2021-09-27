@@ -1,11 +1,10 @@
 // Selecteurs
 const clear = document.querySelector(".clear");
-const dateElement = document.getElementById('item');
+const dateElement = document.getElementById("date");
+const list = document.getElementById("list");
+const input = document.getElementById("input");
 
-// Event
-// Ajout element
-btn.addEventListener('onclick', (e) => {
-    e.preventDefault();
-    list.innerHTML += `<li>${item.value}</li>`;
-    item.value = '';
-});
+// Les classes 
+const CHECK = "fa-check-circle";
+const UNCHECK = "fa-circle-thin";
+const LINE_THROUGH = "lineThrough";
