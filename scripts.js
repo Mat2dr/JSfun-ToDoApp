@@ -9,6 +9,8 @@ const CHECK = "fa-check-circle";
 const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
 
+let LIST = [], id = 0;
+
 //Date du jour
 const options = {weekday: 'long', year: 'numeric', month: 'short', day: 'numeric'};
 const today = new Date();
@@ -42,7 +44,16 @@ document.addEventListener("keyup", function(even){
 
         // Si tache n'est pas vide
         if(toDo){
-            addToDo(toDo);
+            addToDo(toDo, id, false, false);
+
+            LIST.push({
+                name : toDo,
+                id : id,
+                done : false,
+                trash : false
+            });
+
+            id++;
         }
         input.value = "";
     }
