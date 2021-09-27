@@ -14,19 +14,14 @@
     <script src="https://kit.fontawesome.com/98d512f75e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>La check-list</h1>
-    </div>
-    <div class="card">
-        <form action="" class="box">
-            <input type="text" class="todo-input" onfocus="this.value=''" placeholder="Entrer votre ToDo">
-            <button type="submit" class="todo-button">Valider</button>
-            <div class="todo-container">
-                <ul class="todo-list">
-
-                </ul>
-            </div>
+    </header>
+        <form>
+            <input type="text" id="item" placeholder="A faire" autocomplete="off" minlength="2">
+            <button class="todo-button" type="submit">Valider</button>
         </form>
+            <ul id="list"></ul>
     </div>
 </body>
 
