@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,14 +14,28 @@
     <script src="https://kit.fontawesome.com/98d512f75e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>La check-list</h1>
-    </header>
-        <form>
-            <input type="text" id="item" placeholder="A faire" autocomplete="off" minlength="2">
-            <button class="todo-button" type="submit">Valider</button>
-        </form>
-            <ul id="list"></ul>
+    <div class="container">
+        <div class="header">
+            <div class="clear">
+                <i class="fa fa-refresh"></i>
+            </div>
+            <div class="date"></div>
+        </div>
+        <div class="content">
+            <ul id="list">
+                <li class="item">
+                    <i class="fa fa-circle-thin co" job="completed" id="0"></i>
+                    <p class="text">Faire ToDoApp</p>
+                    <i class="fa fa-trash-o de" job="delete" id="0"></i>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="add-to-do">
+            <i class="fa fa-plus-circle"></i>
+            <input type="text" id="input" placeholder="Ajouter une tache">
+        </div>
     </div>
 </body>
 
