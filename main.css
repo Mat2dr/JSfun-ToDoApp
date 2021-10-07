@@ -21,17 +21,18 @@ body{
 
 /* ------------ header ------------ */
 .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 380px;
     height:100px;
     background-color: #4162f6;
     background-size: 100% 200%;
     background-repeat: no-repeat;
-    border-radius: 15px 15px 0 0;
-    position: relative;
+    border-radius: 15px;
 }
 
 #date{
-    position: absolute;
     bottom: 10px;
     left: 10px;
     color: #FFF;
@@ -41,9 +42,11 @@ body{
 
 /* ------------ content ------------ */
 .content{
+    margin: 20px 0px;
     max-width: 380px;
     height: 350px;
     max-height:350px;
+    border-radius: 15px;
     background-color: #FFF;
     overflow: auto;
 }
@@ -103,11 +106,12 @@ body{
 .add-to-do{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     max-width: 380px;
     background-color: #FFF;
     padding: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 15px;
 }
 .add-to-do i{
     font-size: 40px;
